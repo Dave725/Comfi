@@ -1,32 +1,30 @@
 import React from "react";
-import { LinkContainer } from "react-router-bootstrap";
-import { Container, Navbar, Nav } from "react-bootstrap";
+import "../index.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
-      <Navbar bg="primary" variant="dark" expand="lg" collapseOnSelect>
-        <Container>
-          <LinkContainer to="/">
-            <Navbar.Brand>Proshop</Navbar.Brand>
-          </LinkContainer>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-              <LinkContainer to="/cart">
-                <Nav.Link>
-                  <i class="fas fa-shopping-cart"></i>Cart
-                </Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/login">
-                <Nav.Link>
-                  <i class="fas fa-user"></i>Log In
-                </Nav.Link>
-              </LinkContainer>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <div class="f wrapper">
+        <div class="brand">
+          <Link to="/">
+            <img src="/images/Comfi-logo1.png" alt="" />
+          </Link>
+        </div>
+        <div class="f options">
+          {/* <p>
+            <a href="#testimonials">Reviews</a>
+          </p>
+          <p>
+            <a href="footer">Contact</a>
+          </p> */}
+          <Link to="/products">
+            <button class="btn btn-cta">
+              <span>View all products</span>
+            </button>
+          </Link>
+        </div>
+      </div>
     </header>
   );
 };

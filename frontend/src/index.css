@@ -1,3 +1,81 @@
-main {
-  min-height: 80vh;
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+header {
+  padding: 1px 0;
+  background-color: #faf79a;
+}
+
+header img {
+  max-height: 60px;
+}
+
+header .options p {
+  font-size: 1.1rem;
+  margin: 0 1.25em;
+  -webkit-transition: all 0.5s cubic-bezier(0.17, 0.53, 0.51, 0.96) 0s;
+  transition: all 0.5s cubic-bezier(0.17, 0.53, 0.51, 0.96) 0s;
+  cursor: pointer;
+}
+
+header .options p:hover {
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+header .options button.btn-cta {
+  margin-left: 1.25em;
+  font-size: 0.9rem;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #faf79a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  text-align: center;
+  padding: 3em 0;
+}
+
+footer .social {
+  padding: 2em 0;
+}
+
+footer .social i {
+  margin: 0 1em;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+footer .social i:hover {
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+footer p {
+  opacity: 0.7;
 }

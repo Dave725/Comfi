@@ -1,14 +1,17 @@
 import React from "react";
+import "../index.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
   return (
     <footer>
-      <Container>
-        <Row>
-          <Col className="text-center py-3">Copyright &copy; Proshop 2020</Col>
-        </Row>
-      </Container>
+      <div class="social">
+        <i class="fas fa-envelope fa-lg"></i>
+        <i class="fab fa-tiktok fa-lg"></i>
+        <i class="fab fa-instagram fa-lg"></i>
+        <i class="fab fa-facebook-f fa-lg"></i>
+      </div>
+      <p>&copy; Comfi 2021</p>
     </footer>
   );
 };

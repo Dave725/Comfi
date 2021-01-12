@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
 import Product from "../components/Product";
 import axios from "axios";
@@ -15,7 +16,7 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <>
+    <Container className="py-3">
       <h3>Latest Products</h3>
       <Row>
         {products.map((product) => (
@@ -24,7 +25,7 @@ const HomeScreen = () => {
           </Col>
         ))}
       </Row>
-    </>
+    </Container>
   );
 };
 

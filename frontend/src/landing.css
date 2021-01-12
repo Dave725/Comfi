@@ -1,0 +1,255 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  width: 75%;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+.f {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.col-md-6 {
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+#landing {
+  padding: 2em 0;
+  background-color: #faf79a;
+}
+
+#landing .hero-text h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+#landing .hero-img {
+  -webkit-clip-path: circle(43% at center);
+  clip-path: circle(43% at center);
+}
+
+#landing .hero-img img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  -webkit-box-shadow: 0 0 8px 8px #faf79a inset;
+  box-shadow: 0 0 8px 8px #faf79a inset;
+}
+
+#features {
+  background-color: #eee;
+}
+
+#features .wrapper {
+  padding-top: 0;
+}
+
+#features .feature {
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: wrap column;
+  flex-flow: wrap column;
+}
+
+#features .feature p {
+  width: 15rem;
+}
+
+#features .feature i {
+  color: #8bd0f0;
+  margin: 0.5em 0;
+}
+
+#products {
+  background-color: #faf79a;
+  text-align: center;
+}
+
+#testimonials {
+  background-color: #eee;
+}
+
+#contact {
+  background-color: #faf79a;
+}
+
+#call-to-action {
+  background-color: #faf79a;
+  text-align: center;
+  color: #8bd0f0;
+  padding-bottom: 2em;
+}
+
+#call-to-action h1 {
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
+.btn {
+  border-color: #8bd0f0;
+}
+
+.btn:hover {
+  color: #222;
+  background-color: #8bd0f0;
+  border-color: #8bd0f0;
+}
+
+.btn-cta,
+.btn-cta:focus {
+  border: 2px solid #8bd0f0;
+  padding: 0.75em 1.5em;
+  border-radius: 20px;
+  color: #8bd0f0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cta span,
+.btn-cta:focus span {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.5s cubic-bezier(0.17, 0.53, 0.51, 0.96) 0s;
+  transition: all 0.5s cubic-bezier(0.17, 0.53, 0.51, 0.96) 0s;
+  font-weight: 800;
+}
+
+.btn-cta::after,
+.btn-cta:focus::after {
+  content: "";
+  background-color: #8bd0f0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: circle(0px at center);
+  clip-path: circle(0px at center);
+  -webkit-transition: all 0.5s cubic-bezier(0.17, 0.53, 0.51, 0.96) 0s;
+  transition: all 0.5s cubic-bezier(0.17, 0.53, 0.51, 0.96) 0s;
+}
+
+.btn-cta:hover,
+.btn-cta:focus:hover {
+  color: #222;
+}
+
+.btn-cta:hover::after,
+.btn-cta:focus:hover::after {
+  -webkit-clip-path: circle(100% at center);
+  clip-path: circle(100% at center);
+}
+
+#testimonials {
+  margin: auto;
+}
+
+#testimonials .item {
+  padding: 2em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+#testimonials .item .image {
+  position: relative;
+}
+
+#testimonials .item .image img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-clip-path: circle(50% at center);
+  clip-path: circle(50% at center);
+}
+
+#testimonials .item .text {
+  display: inline-block;
+  width: 50%;
+  margin-left: 3em;
+}
+
+#testimonials .item .text h2 {
+  color: #8bd0f0;
+}
+
+#testimonials .item i {
+  position: absolute;
+  right: 13%;
+  bottom: 10%;
+  color: #8bd0f0;
+}
+
+#testimonials .carousel-indicators,
+#testimonials .carousel-control-prev-icon,
+#testimonials .carousel-control-next-icon {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+@media (max-width: 760px) {
+  #testimonials {
+    text-align: center;
+  }
+  #testimonials .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+  #testimonials .item .text {
+    width: 90%;
+    margin: 2em auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

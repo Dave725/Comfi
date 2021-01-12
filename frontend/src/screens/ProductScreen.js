@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col, ListGroup, Row, Image, Card, Button } from "react-bootstrap";
+import { Container, Col, ListGroup, Row, Image, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Rating from "../components/Rating";
 import axios from "axios";
@@ -16,15 +16,15 @@ const ProductScreen = ({ match }) => {
   }, [match]);
 
   return (
-    <div>
-      <Link className="btn btn-dark my-3" to="/">
+    <Container className="py-2">
+      {/* <Link className="btn btn-dark my-3" to="/products">
         Go Back
-      </Link>
+      </Link> */}
       <Row>
-        <Col md={6}>
+        <Col md={7}>
           <Image src={product.image} alt={product.name} fluid />
         </Col>
-        <Col md={3}>
+        <Col md={5} className="my-auto">
           <ListGroup variant="flush">
             <ListGroup.Item>
               <h3>{product.name}</h3>
@@ -34,8 +34,6 @@ const ProductScreen = ({ match }) => {
             </ListGroup.Item>
             <ListGroup.Item>{product.description}</ListGroup.Item>
           </ListGroup>
-        </Col>
-        <Col md={3}>
           <Card>
             <ListGroup variant="flush">
               <ListGroup.Item>
@@ -59,17 +57,18 @@ const ProductScreen = ({ match }) => {
               <ListGroup.Item>
                 <Button
                   className="btn btn-block btn-warning"
+                  style={{ backgroundColor: "#8bd0f0" }}
                   type="button"
                   disabled={product.countInStock === 0}
                 >
-                  Add to Cart
+                  Buy Now
                 </Button>
               </ListGroup.Item>
             </ListGroup>
           </Card>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 };
 

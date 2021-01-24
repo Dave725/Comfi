@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
-      <div class="f wrapper">
-        <div class="brand">
+      <div className="f wrapper">
+        <div className="brand">
           <Link to="/">
             <img src="/images/Comfi-logo1.png" alt="" />
           </Link>
         </div>
-        <div class="f options">
+        <div className="f options">
           {/* <p>
             <a href="#testimonials">Reviews</a>
           </p>
@@ -19,7 +19,7 @@ const Header = () => {
             <a href="footer">Contact</a>
           </p> */}
           <Link to="/products">
-            <button class="btn btn-cta">
+            <button className="btn btn-cta">
               <span>View all products</span>
             </button>
           </Link>

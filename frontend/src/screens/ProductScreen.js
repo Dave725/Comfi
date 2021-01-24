@@ -3,6 +3,7 @@ import { Container, Col, ListGroup, Row, Image, Card, Button } from "react-boots
 import { Link } from "react-router-dom";
 import Rating from "../components/Rating";
 import axios from "axios";
+import StripeButton from "../components/StripeButton";
 
 const ProductScreen = ({ match }) => {
   const [product, setProduct] = useState({});
@@ -17,9 +18,10 @@ const ProductScreen = ({ match }) => {
 
   return (
     <Container className="py-2">
-      {/* <Link className="btn btn-dark my-3" to="/products">
+      <Link className="btn btn-dark my-3" to="/products">
         Go Back
-      </Link> */}
+      </Link>
+
       <Row>
         <Col md={7}>
           <Image src={product.image} alt={product.name} fluid />
@@ -55,14 +57,7 @@ const ProductScreen = ({ match }) => {
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
-                <Button
-                  className="btn btn-block btn-warning"
-                  style={{ backgroundColor: "#8bd0f0" }}
-                  type="button"
-                  disabled={product.countInStock === 0}
-                >
-                  Buy Now
-                </Button>
+                <StripeButton />
               </ListGroup.Item>
             </ListGroup>
           </Card>

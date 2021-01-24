@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Rating = ({ rating, numReviews, color }) => {
   return (
-    <div>
+    <>
       <span>
         <i
           style={{ color: color }}
@@ -65,7 +65,7 @@ const Rating = ({ rating, numReviews, color }) => {
         ></i>
       </span>
       <span className="mx-1">{numReviews && `${numReviews} reviews`}</span>
-    </div>
+    </>
   );
 };
 

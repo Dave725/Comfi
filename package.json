@@ -1,7 +1,7 @@
 {
-  "name": "proshop",
+  "name": "comfi",
   "version": "1.0.0",
-  "description": "MERN e-commerce app",
+  "description": "Website for Young Enterprise",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -12,8 +12,10 @@
   "author": "David Wu",
   "license": "MIT",
   "dependencies": {
+    "@stripe/stripe-js": "^1.11.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "stripe": "^8.132.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",

@@ -101,6 +101,16 @@ a:hover {
   text-align: center;
 }
 
+.card {
+  background-color: transparent;
+  padding: 1em;
+  border: transparent;
+}
+
+.card h3 {
+  color: #8bd0f0;
+}
+
 #testimonials {
   background-color: #eee;
 }

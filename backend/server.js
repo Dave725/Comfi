@@ -12,6 +12,10 @@ const stripe = Stripe(
 app.post("/create-checkout-session", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
+    billing_address_collection: "auto",
+    shipping_address_collection: {
+      allowed_countries: ["GB"],
+    },
     line_items: [
       {
         price_data: {
@@ -25,8 +29,8 @@ app.post("/create-checkout-session", async (req, res) => {
       },
     ],
     mode: "payment",
-    success_url: "https://localhost:3000/success",
-    cancel_url: "https://localhost:3000/cancel",
+    success_url: "http://localhost:3000/success.html",
+    cancel_url: "http://localhost:3000/",
   });
 
   res.json({ id: session.id });

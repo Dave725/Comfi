@@ -1,0 +1,95 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  background-color: #8bd0f0;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+img {
+  height: 30vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  border-color: #faf790;
+  background-color: inherit;
+}
+
+.btn:hover {
+  color: #222;
+  background-color: #faf790;
+  border-color: #faf790;
+}
+
+.btn-cta,
+.btn-cta:focus {
+  border: 2px solid #faf790;
+  padding: 0.75em 1.5em;
+  border-radius: 20px;
+  color: #faf790;
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cta span,
+.btn-cta:focus span {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.5s cubic-bezier(0.17, 0.53, 0.51, 0.96) 0s;
+  transition: all 0.5s cubic-bezier(0.17, 0.53, 0.51, 0.96) 0s;
+  font-weight: 600;
+}
+
+.btn-cta::after,
+.btn-cta:focus::after {
+  content: "";
+  background-color: #faf790;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: circle(0px at center);
+  clip-path: circle(0px at center);
+  -webkit-transition: all 0.5s cubic-bezier(0.17, 0.53, 0.51, 0.96) 0s;
+  transition: all 0.5s cubic-bezier(0.17, 0.53, 0.51, 0.96) 0s;
+}
+
+.btn-cta:hover,
+.btn-cta:focus:hover {
+  color: #222;
+}
+
+.btn-cta:hover::after,
+.btn-cta:focus:hover::after {
+  -webkit-clip-path: circle(100% at center);
+  clip-path: circle(100% at center);
+}

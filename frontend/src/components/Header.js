@@ -12,12 +12,9 @@ const Header = () => {
           </Link>
         </div>
         <div className="f options">
-          {/* <p>
-            <a href="#testimonials">Reviews</a>
-          </p>
-          <p>
-            <a href="footer">Contact</a>
-          </p> */}
+          <Link to="/about">
+            <p>About us</p>
+          </Link>
           <Link to="/products">
             <button className="btn btn-cta">
               <span>View all products</span>

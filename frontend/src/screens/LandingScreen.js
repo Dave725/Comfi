@@ -1,5 +1,6 @@
 import React from "react";
 import "../landing.css";
+import "../cta-button.css";
 import { Link } from "react-router-dom";
 
 const LandingScreen = () => {
@@ -79,9 +80,9 @@ const LandingScreen = () => {
                   Some quick example text to build on the card title and make up the bulk
                   of the card's content.
                 </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
+                <Link to="/products">
+                  <button className="btn btn-primary">See product</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -98,9 +99,9 @@ const LandingScreen = () => {
                   Some quick example text to build on the card title and make up the bulk
                   of the card's content.
                 </p>
-                <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
+                <Link to="/products">
+                  <button className="btn btn-primary">See product</button>
+                </Link>
               </div>
             </div>
           </div>

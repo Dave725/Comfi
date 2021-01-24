@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Col, ListGroup, Row, Image, Card, Button } from "react-bootstrap";
+import { Container, Col, ListGroup, Row, Image, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Rating from "../components/Rating";
 import axios from "axios";

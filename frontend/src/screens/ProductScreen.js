@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Container, Col, ListGroup, Row, Image, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Rating from "../components/Rating";
+import Rating from "./components/Rating";
 import axios from "axios";
-import StripeButton from "../components/StripeButton";
+import StripeButton from "./components/StripeButton";
 
 const ProductScreen = ({ match }) => {
   const [product, setProduct] = useState({});

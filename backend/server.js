@@ -9,6 +9,8 @@ const stripe = Stripe(
   "sk_test_51ICuKuKgM9REhsAZUBIiZVJ7hm4LgWh1C49Nv0rVXKyDJq5o6jkJLGc3cWPyWKdDJgTxAkgfq0PfzOo5iNmcYtbi005iSQzCpi"
 );
 
+const quantity = 1;
+
 app.post("/create-checkout-session", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
@@ -25,7 +27,7 @@ app.post("/create-checkout-session", async (req, res) => {
           },
           unit_amount: 2000,
         },
-        quantity: 1,
+        quantity: quantity,
       },
     ],
     mode: "payment",

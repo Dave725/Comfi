@@ -16,9 +16,7 @@ const Header = () => {
             <p>About us</p>
           </Link>
           <Link to="/products">
-            <button className="btn btn-cta">
-              <span>View all products</span>
-            </button>
+            <p>Products</p>
           </Link>
         </div>
       </div>

@@ -70,7 +70,7 @@ const LandingScreen = () => {
           <div className="col-md-6">
             <div className="card">
               <img
-                src="./images/products/standard_no_bg.png"
+                src="./images/products/black_no_bg.png"
                 className="card-img-top"
                 alt="..."
               />
@@ -81,16 +81,13 @@ const LandingScreen = () => {
                   cupiditate reprehenderit quisquam distinctio soluta maxime libero
                   nostrum iusto accusantium! Eius.
                 </p>
-                {/* <Link to="/products">
-                  <button className="btn btn-primary">See product</button>
-                </Link> */}
               </div>
             </div>
           </div>
           <div className="col-md-6">
             <div className="card">
               <img
-                src="./images/products/premium_no_bg.png"
+                src="./images/products/blue_no_bg.png"
                 className="card-img-top"
                 alt="..."
               />
@@ -101,9 +98,6 @@ const LandingScreen = () => {
                   cupiditate reprehenderit quisquam distinctio soluta maxime libero
                   nostrum iusto accusantium! Eius.
                 </p>
-                {/* <Link to="/products">
-                  <button className="btn btn-primary">See product</button>
-                </Link> */}
               </div>
             </div>
           </div>
@@ -172,24 +166,6 @@ const LandingScreen = () => {
               </div>
             </div>
           </div>
-          <a
-            className="carousel-control-prev"
-            href="#carousel-t"
-            role="button"
-            data-slide="prev"
-          >
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="sr-only">Previous</span>
-          </a>
-          <a
-            className="carousel-control-next"
-            href="#carousel-t"
-            role="button"
-            data-slide="next"
-          >
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="sr-only">Next</span>
-          </a>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
@@ -201,9 +177,11 @@ const LandingScreen = () => {
       </section>
       <section id="call-to-action">
         <h1>Try it now and you would not regret it!</h1>
-        <button className="btn btn-cta">
-          <span>SHOP NOW</span>
-        </button>
+        <Link to="/products">
+          <button className="btn btn-cta">
+            <span>SHOP NOW</span>
+          </button>
+        </Link>
       </section>
     </>
   );

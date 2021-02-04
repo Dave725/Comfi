@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Container, Col, ListGroup, Row, Image, Card } from "react-bootstrap";
+import { Container, Col, ListGroup, Row, Image, Card, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Rating from "./components/Rating";
 import axios from "axios";
 import StripeButton from "./components/StripeButton";
 
 const ProductScreen = ({ match }) => {
+  const [qty, setQty] = useState(1);
+
   const [product, setProduct] = useState({});
 
   useEffect(() => {
@@ -18,10 +20,6 @@ const ProductScreen = ({ match }) => {
 
   return (
     <Container className="py-2">
-      <Link className="btn btn-dark my-3" to="/products">
-        Go Back
-      </Link>
-
       <Row>
         <Col md={7}>
           <Image src={product.image} alt={product.name} fluid />
@@ -40,7 +38,7 @@ const ProductScreen = ({ match }) => {
             <ListGroup variant="flush">
               <ListGroup.Item>
                 <Row>
-                  <Col>Price</Col>
+                  <Col>Price:</Col>
                   <Col>
                     <strong>{product.price}</strong>
                   </Col>
@@ -48,11 +46,29 @@ const ProductScreen = ({ match }) => {
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Status</Col>
+                  <Col>Status:</Col>
                   <Col>
                     <strong>
                       {product.countInStock > 0 ? "In stock" : "Out of Stock"}
                     </strong>
+                  </Col>
+                </Row>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Row>
+                  <Col>Quantity:</Col>
+                  <Col>
+                    <Form.Control
+                      as="select"
+                      value={qty}
+                      onChange={(e) => setQty(e.target.value)}
+                    >
+                      {[...Array(product.countInStock).keys()].map((x) => (
+                        <option key={x + 1} value={x + 1}>
+                          {x + 1}
+                        </option>
+                      ))}
+                    </Form.Control>
                   </Col>
                 </Row>
               </ListGroup.Item>

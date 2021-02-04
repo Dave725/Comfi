@@ -13,6 +13,10 @@ body {
   scroll-behavior: smooth;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 header {
   padding: 1px 0;
   background-color: #faf79a;
@@ -57,7 +61,7 @@ footer {
   -ms-flex-flow: column;
   flex-flow: column;
   text-align: center;
-  padding: 3em 0;
+  padding: 2em 0;
 }
 
 footer .social {
